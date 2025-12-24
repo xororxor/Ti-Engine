@@ -1,0 +1,88 @@
+{
+  "start": {
+    "text": "You are walking along the shore when a strange man approaches you.\nHe asks, \"What is your name?\"",
+    "options": {
+      "Answer the question": "say_name",
+      "Refuse to answer": "2"
+    }
+  },
+
+  "say_name": {
+    "text": "The man waits for your answer.",
+    "input": {
+      "var": "playerName",
+      "placeholder": "Enter your name",
+      "next": "after_name"
+    }
+  },
+
+  "after_name": {
+    "text": "Man: Nice to meet you, {{playerName}}. Are you ready to begin?",
+    "options": {
+      "Yes": "begin",
+      "No": "end"
+    }
+  },
+
+  "begin": {
+    "text": "Man: Alright, {{playerName}}. I need your help digging here.",
+    "options": {
+      "Help him dig": "0",
+      "I need to pee first": "1",
+      "Refuse": "2"
+    }
+  },
+
+  "0": {
+    "text": "As you dig the grave, guards suddenly appear and spot you.\nWhat do you do?",
+    "options": {
+      "Run away": "3",
+      "Hide inside the grave": "4",
+      "Fight the guards": "6"
+    }
+  },
+
+  "1": {
+    "text": "Man: Fine. I’ll come with you.",
+    "options": {
+      "Okay": "7",
+      "No, go back": "begin"
+    }
+  },
+
+  "2": {
+    "text": "Man: You have seen too much, and I have no use for you anymore.\nSorry.\n\nThe man kills you.",
+    "options": {
+      "Restart": "start"
+    }
+  },
+
+  "3": {
+    "text": "Panicking, you try to run away.\nA gunshot echoes.\n\nThe guards shoot you in the head.\nYou are dead.",
+    "options": {
+      "Restart": "start"
+    }
+  },
+
+  "4": {
+    "text": "You hide inside the grave.\nThe guards kill the man and leave the area.\n\nYou survive."
+  },
+
+  "6": {
+    "text": "You are not strong enough to fight the guards.\nThey kill you without mercy.",
+    "options": {
+      "Restart": "start"
+    }
+  },
+
+  "7": {
+    "text": "You relieve yourself while the man awkwardly looks away.\nAfterward, you return to the digging site.",
+    "options": {
+      "Continue": "begin"
+    }
+  },
+
+  "end": {
+    "text": "Man: Maybe another time, {{playerName}}."
+  }
+}
