@@ -3,7 +3,7 @@ const optionContainer = document.querySelector("#option_container");
 
 let gamestats = { current_state: "start" };
 
-fetch("/data/The-Test.lvl")
+fetch("/data/test.lvl")
   .then((res) => res.text())
   .then((data) => {
     const level = JSON.parse(data);
