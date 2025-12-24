@@ -50,3 +50,23 @@ body {
 .hide {
   display: none;
 }
+
+.submit-btn{
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 13px;
+  color: black;
+  width: 5em;
+  margin: auto;
+  font-size: 1.1rem;
+  padding: .25em;
+  cursor: pointer;
+  transition: .1s ease-in;
+}
+
+.submit-btn:hover{
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  transition: .25s ease-in;
+}

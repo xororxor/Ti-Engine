@@ -41,7 +41,9 @@ function run_node(level) {
     const submitBtn = document.createElement("button");
 
     inputElement.placeholder = node.input.placeholder;
+    inputElement.classList.add("option");
     submitBtn.textContent = "Submit";
+    submitBtn.classList.add("submit-btn");
 
     submitBtn.onclick = () => {
       gamestats[node.input.var] = inputElement.value;
